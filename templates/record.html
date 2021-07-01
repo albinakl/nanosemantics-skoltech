@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adding
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Here you can write a letter to developers</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Type you name"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="The theme of your request"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Type you request"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Send">
+    </form>
+</div>
+{% endblock %}

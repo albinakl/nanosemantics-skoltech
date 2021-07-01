@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+FAQs
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>List of all requests</h1>
+
+    {% for article in articles%}
+    <div class="alert alert_info">
+        <h2>{{ article.title }}</h2>
+        <p><b>Date: {{ article.date.date() }}</b></p>
+        <p>{{ article.intro }}</p>
+        <a href="/faq/{{ article.id }}" class="btn btn-warning">Open full text</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
