@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Верификация
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/templates/logo.png" alt="" width="72" height="57">
+      <h2>VERIFICATION</h2>
+    </div>
+
+    <h5>Here you can add your audio file for verification task (only in .wav format)</h5>
+    <form method="post">
+        <div>
+            <label for="myfile" class="label">Выберите файлы</label>
+            <input type="file" class="my" id="myfile" name="myfile" multiple>
+        </div>
+        <div class="py-5 text-center">
+                <input type="submit" class="btn btn-success"  value="Send">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
